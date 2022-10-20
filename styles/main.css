@@ -1,0 +1,229 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:underline; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;} 
+
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+/* 下面开始样式表 */
+
+
+/* pc width > 523px */
+body {
+    background-color: #f3f3f3;
+    height: 1200px;
+    font-size: 16px;
+
+    min-width: 200px;
+    max-width: 1378px;
+    margin: auto;
+
+}
+
+/* phone width < 523px */
+@media screen and (max-width: 550px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* phone width < 400px */
+
+
+
+.nav-bar {
+    position: fixed;
+    top: 0px;
+    height: 3.75rem;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(0.625rem);
+
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6);
+    z-index: 5;
+}
+
+.nav-bar .logo img {
+    height: 2.5rem;
+    width: auto;
+    margin: 0.625rem;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.banner-title-01 {
+    position: absolute;
+    top: 36vw;
+    left: 4vw;
+    font-size: 4.4vw;
+    z-index: 2;
+    
+    color: #fff;
+}
+
+.banner-title-02 {
+    position: absolute;
+    top: 49vw;
+    left: 4.3vw;
+    font-size: 3vw;
+    z-index: 2;
+    
+    color: #fff;
+}
+
+@media screen and (min-width: 1378px) {
+    .banner-title-01 {
+        top: 510px;
+        left: 4vw;
+        font-size: 60px;
+    }
+    .banner-title-02 {
+        top: 700px;
+        left: 4.3vw;
+        font-size: 41px;
+    }
+}
+
+.links-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 5vw 5vw;
+}
+
+.links-list li {
+    width: 13.375rem;
+    height: 11.25rem;
+
+    margin: 2vw;
+    
+    background-color: #fff;
+    border-radius: 0.75rem;
+    cursor: pointer;
+
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    transition: all 0.08s ease-in-out;
+}
+
+
+
+.links-list li:hover {
+    transform: scale(1.2);
+}
+
+.links-list li a {
+    position: absolute;
+    text-decoration: none;
+
+    width: 8.75rem;
+    text-align: center;
+
+    padding: 2.5rem 2.25rem; /*使得可点击区域刚好沾满整个li元素*/
+
+    font-size: 1.2rem;
+    line-height: 3.125rem; /*加大图标与下方文字之间的间距*/
+}
+
+@media screen and (max-width: 550px) {
+    .links-list li {
+        width: 9rem;
+        height: 7rem;
+    }
+    .links-list li a {
+        padding: 1.2rem 0.1rem;
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+}
+
+.icon-intro {
+    background-image: url(../images/intro.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+}
+.icon-play-ppt {
+    background-image: url(../images/play-ppt.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+}
+.icon-download-ppt {
+    background-image: url(../images/download-ppt.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+}
+.icon-how-to-use {
+    background-image: url(../images/how-to-use.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+}
+.icon-demo {
+    background-image: url(../images/demo.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+}
+.icon-download-files {
+    background-image: url(../images/download-files.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 下面是footer区域 */
+.footer {
+    border-top: 1px solid #d2d2d7;
+    background-color: #f5f5f7;
+    color: #6e6e73;
+    font-size:1vw;
+}
+
+.footer .notice {
+    margin: 1vw;
+}
+
+.footer .copyright {
+    margin: 1vw;
+}
